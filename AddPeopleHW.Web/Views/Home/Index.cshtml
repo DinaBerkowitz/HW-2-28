@@ -1,0 +1,25 @@
+﻿@using AddPeopleHW.Data
+@model PersonViewModel
+
+
+<a href="/home/showadd" class="btn btn-success">Add People</a>
+<div class="container mt-5"></div>
+<table class="table table-hover table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Person p in Model.people)
+        {
+            <tr>
+                <td>@p.FirstName</td>
+                <td>@p.LastName</td>
+                <td>@p.Age</td>
+            </tr>
+        }
+    </tbody>
+</table>
